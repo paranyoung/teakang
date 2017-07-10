@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>태광실업</title>
+    <link rel="stylesheet" href="animate.css" type="text/css" />
+    <link rel="stylesheet" href="font/flaticon.css" type="text/css" />
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script type="text/javascript" src="wow.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    // new WOW().init();
+    $(function(){
+             // $('.menu>ul>li').hover(마우스오버,마우스아웃)
+            $('.menu>ul>li').hover(function(){
+                var pos_x = $(this).position().left;
+                $('.menu .bar').stop().animate({
+                    left:pos_x
+                });
+                $('.menu>ul>li div').stop().slideDown()
+            },function(){
+                    var pos_x = $(this).position().left;
+                    $('.menu .bar').stop().animate({
+                        left:-220
+                    });
+                console.log('아웃');
+                $('.menu>ul>li div').stop().slideUp(1000,function(){
+                    console.log("ok");
+                })
+            })
+
+        })
+
+    </script>
+
+
+</head>
+<body>
+    <header>
+        <div>
+            <div class="gnb">
+                <div class="logo">
+                    <a href="#"><img src="http://www.tkgroup.co.kr/kor/_Img/logo.png" alt="태광실업 로고"></a>
+                </div>
+                <div class="site-option">
+                    <a href="#" class="home">home</a>
+                    <a href="#" class="lang-en">ENG</a>
+                    <a href="#" class="sitemap">
+                        <span></span>
+                        <span class="centerLine"></span>
+                        <span></span>
+                    </a>
+                </div>
+                <div class="menu">
+                    <span class="bar"></span>
+                    <ul>
+                        <li><a href="#">company</a>
+                            <div>
+                                <ul>
+                                    <li><a href="#">회사개요</a></li>
+                                    <li><a href="#">CEO인사말</a></li>
+                                    <li><a href="#">회사 연혁</a></li>
+                                    <li><a href="#">관계사 안내</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">management innovation</a>
+                            <div class="">
+                                <ul>
+                                    <li><a href="#">비전</a></li>
+                                    <li><a href="#">TK WAY</a></li>
+                                    <li><a href="#">LEAN</a></li>
+                                    <li><a href="#">TPM</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">portfolio</a>
+                            <div class="">
+                                <ul>
+                                    <li><a href="#">포트폴리오</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">sustainability management</a>
+                            <div class="">
+                                <ul>
+                                    <li><a href="#">SM</a></li>
+                                    <li><a href="#">지속가능 경영보고서</a></li>
+                                    <li><a href="#">정산장학재단</a></li>
+                                    <li><a href="#">장학생지원</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">recruit</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container">
+
+        <div class="intro">
+            <video  autoplay loop>
+                <source src="images/tkm_titi.mp4">
+            </video>
+            <div class="titler">
+                <img src="images/m-slogan.png" alt="" />
+            </div>
+        </div>
+
+        <div class="overview">
+                <div>
+                    <img src="http://www.tkgroup.co.kr/kor/_Img/Main/about-01.jpg" alt="" />
+                    <span class="text">
+                        <span class="wa">
+                            <span class="word">VISION</span>
+                            <span class="line1"></span>
+                            <span class="line2"></span>
+                            <span class="line3"></span>
+                            <span class="line4"></span>
+                        </span>
+                    </span>
+                </div>
+                <div>
+                    <img src="http://www.tkgroup.co.kr/kor/_Img/Main/about-02.jpg" alt="">
+                    <span class="text">
+                        <span class="wa">
+                            <span class="word">PORTFOLIO</span>
+                            <span class="line1"></span>
+                            <span class="line2"></span>
+                            <span class="line3"></span>
+                            <span class="line4"></span>
+                        </span>
+                    </span>
+                </div>
+                <div>
+                    <img src="http://www.tkgroup.co.kr/kor/_Img/Main/about-03.jpg" alt="">
+                    <span class="text">
+                        <span class="wa">
+                            <span class="word">RECRUIT</span>
+                            <span class="line1"></span>
+                            <span class="line2"></span>
+                            <span class="line3"></span>
+                            <span class="line4"></span>
+                        </span>
+                    </span>
+                </div>
+            </div>
+
+        <div class="map">
+            <h3>global networks</h3>
+            <div class="global01">
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Main/global-01.png" alt="" />
+            </div>
+            <div class="global02 wow bounceInUp" >
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Main/global-02.png" alt="" />
+                <p class="txt">
+                    <strong>takwang</strong>
+                    gimhae / korea
+                </p>
+                <span class="line1"></span>
+                <span class="line2"></span>
+            </div>
+            <div class="global03 wow bounceInUp">
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Main/global-03.png" alt="" />
+                <p class="txt">
+                    <strong>BUSINESS PARTNER</strong>
+                    Portland / USA
+                </p>
+                <span class="line01"></span>
+                <span class="line02"></span>
+            </div>
+            <div class="global04 wow bounceInUp">
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Main/global-04.png" alt="" />
+                <p class="txt">Qingdao / China</p>
+                <span class="line01"></span>
+                <span class="line02"></span>
+            </div>
+            <div class="global05 wow bounceInUp">
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Main/global-05.png" alt="" />
+                <p class="txt">Bien Hoa / Vietnam <br>Moc Bai / Vietnam</p>
+                <span class="line01"></span>
+                <span class="line02"></span>
+                <span class="line03"></span>
+            </div>
+            <div class="global06 wow bounceInUp">
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Main/global-06.png" alt="" />
+                <p class="txt">SUBANG / Indonesia</p>
+                <span class="line01"></span>
+                <span class="line02"></span>
+            </div>
+        </div>
+
+        <div class="social">
+            <h3 class="blind">주요활동</h3>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="img">
+                            <img src="http://www.tkgroup.co.kr/kor/_Img/Main/social-01.jpg" alt="" />
+                        </span>
+                        <span class="btxt">
+                            social contribution
+                            <span class="line"></span>
+                        </span>
+                        <span class="stxt">사회공헌활동</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="img">
+                            <img src="http://www.tkgroup.co.kr/kor/_Img/Main/social-02.jpg" alt="" />
+                        </span>
+                        <span class="btxt">
+                            jeongsan scholarship foundation
+                            <span class="line"></span>
+                        </span>
+                        <span class="stxt">정선장학재단</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="add">
+            <div class="bg">
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Main/add-bg.jpg" alt="" />
+            </div>
+            <div class="div-ov">
+                <p class="img">
+                    <img src="http://www.tkgroup.co.kr/kor/_Img/Main/add-txt.png" alt="" class=" wow slideInRight"/>
+                </p>
+                <p class="txt">
+                    Global</br>
+                    New Frontier</br>
+                    <span>Taekwang</span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div id="footerWrap">
+            <div class="footertop">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span>
+                                개인정보처리방침
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>
+                                지속가능보고서 다운로드
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="divCon">
+                <div class="fcopyright">
+                    <p class="flogo">
+                        <img src="http://www.tkgroup.co.kr/kor/_Img/f-logo.png" alt="">
+                    </p>
+                    <div class="finfo">
+                        <span class="name">태광실업(주)</span>
+                        <span class="paddr">경상남도 김해시 김해대로 2635번길 26(안동)</span>
+                        <span class="pter-wrap">
+                            <span class="ptel">TEL : 055-333-7151</span>
+                        </span>
+                        <span class="pter-wrap">
+                            <span class="ptel"> FAX : 055-336-4917</span>
+                        </span>
+                    </div>
+                    <div class="fcopyright">
+                        Copyright (C) 2016 Taekwang. co., ltd All rights reserved.
+                    </div>
+                </div>
+            </div>
+            <a href="#top" class="topBtn">
+                <span>TOP</span>
+            </a>
+        </div>
+    </div>
+
+
+
+
+    </body>
+
+
+    </html>
+    <!--  -->

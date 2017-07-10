@@ -1,0 +1,1211 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+body {
+  font-family: 'Oswald', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+}
+img,
+video {
+  vertical-align: top;
+}
+ul,
+li,
+ol {
+  list-style: none;
+}
+body {
+  font-family: 'Oswald', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+}
+img,
+video {
+  vertical-align: top;
+}
+ul,
+li,
+ol {
+  list-style: none;
+}
+@keyframes up {
+  0% {
+    width: 23px;
+  }
+  50% {
+    width: 13px;
+  }
+  100% {
+    width: 23px;
+  }
+}
+@keyframes down {
+  0% {
+    width: 13px;
+  }
+  50% {
+    width: 23px;
+  }
+  100% {
+    width: 13px;
+  }
+}
+header {
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+header > div {
+  background-color: #ededed;
+  overflow: hidden;
+}
+.gnb {
+  height: 80px;
+  background-color: #000;
+  padding: 0 30px;
+}
+.gnb .logo {
+  float: left;
+  margin-top: 22px;
+}
+.gnb .site-option {
+  height: 35px;
+  width: 125px;
+  float: right;
+  margin-top: 20px;
+}
+.gnb .menu {
+  height: 80px;
+  width: 1100px;
+  margin: 0 auto;
+}
+.site-option {
+  font-size: 0;
+}
+.site-option a {
+  text-align: center;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: top;
+  height: 35px;
+}
+.site-option .home {
+  width: 40px;
+  text-indent: -9999px;
+  background-color: #000;
+  background-image: url(http://www.tkgroup.co.kr/kor/_Img/Layout/home-ico.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.site-option .home:hover {
+  background-color: #666;
+}
+.site-option .lang-en {
+  width: 45px;
+  line-height: 35px;
+  color: #FFF;
+  background-color: #086c6d;
+}
+.site-option .lang-en:hover {
+  background-color: #199394;
+}
+.site-option .sitemap {
+  text-align: right;
+  width: 40px;
+  font-size: 0;
+}
+.site-option .sitemap span {
+  line-height: 100%;
+  position: relative;
+  margin: 4px;
+  top: 2px;
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+}
+.site-option .sitemap .centerLine {
+  width: 17px;
+}
+.site-option .sitemap:hover span:first-child {
+  animation: aniline1 1s infinite;
+}
+.site-option .sitemap:hover span:first-child + span {
+  animation: aniline2 1s infinite;
+}
+.site-option .sitemap:hover span:first-child + span + span {
+  animation: aniline1 1.5s infinite;
+}
+@keyframes aniline1 {
+  0% {
+    width: 32px;
+  }
+  50% {
+    width: 22px;
+  }
+  100% {
+    width: 32px;
+  }
+}
+@keyframes aniline2 {
+  0% {
+    width: 22px;
+  }
+  80% {
+    width: 32px;
+  }
+  100% {
+    width: 22px;
+  }
+}
+.menu span.bar {
+  display: block;
+  height: 4px;
+  width: 220px;
+  background-color: #086c6d;
+  position: absolute;
+  bottom: 0;
+  left: -220px;
+  z-index: 100;
+}
+.menu > ul > li {
+  width: 220px;
+  float: left;
+  text-align: center;
+}
+.menu > ul > li > a {
+  line-height: 80px;
+  color: #FFF;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family: 'Oswald', sans-serif;
+  display: block;
+}
+.menu > ul > li > a:hover {
+  color: #086c6d;
+}
+.menu > ul > li > div {
+  display: none;
+  background-color: #ededed;
+}
+.menu > ul > li > div > ul {
+  padding: 15px 0;
+}
+.menu > ul > li > div > ul > li {
+  line-height: 45px;
+  color: #000;
+  border-bottom: 0;
+}
+.menu > ul > li > div > ul > li:hover > a {
+  color: #086c6d;
+  font-weight: bold;
+}
+.intro {
+  background-color: #ccc;
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+  width: 100%;
+  transition: 1s;
+}
+.intro video {
+  height: 100%;
+}
+.intro .titler {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  position: absolute;
+  text-align: center;
+}
+.intro .titler:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.intro .titler img {
+  position: relative;
+  top: 100px;
+  vertical-align: middle;
+  transition: 1s;
+  margin-top: -66px;
+}
+.overview div {
+  float: left;
+  width: 33.33333%;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: initial;
+  overflow: hidden;
+  vertical-align: top;
+  transition: 1s;
+  position: relative;
+}
+.overview div:hover img {
+  transform: scale(1.5, 1.5);
+}
+.overview div:hover:after {
+  opacity: 1;
+}
+.overview div:hover:after {
+  opacity: 1;
+}
+.overview div:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 131, 132, 0.5);
+  opacity: 0;
+  transition: 1s;
+}
+.overview div:hover .text .wa .line1 {
+  width: 100%;
+}
+.overview div:hover .text .wa .line2 {
+  height: 100%;
+}
+.overview div:hover .text .wa .line3 {
+  width: 100%;
+}
+.overview div:hover .text .wa .line4 {
+  height: 100%;
+}
+.overview div:hover .text:before {
+  width: 0;
+}
+.overview div img {
+  width: 100%;
+  vertical-align: top;
+  transition: 1s ease-in-out;
+}
+.overview div .text {
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  top: 50%;
+  line-height: 20px;
+  margin-top: -20px;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+.overview div .text:before {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  left: 50%;
+  display: block;
+  content: "";
+  text-align: center;
+  margin: 0 auto;
+  transform-origin: center;
+  transition: 1s;
+}
+.overview div .text .wa {
+  display: inline-block;
+  padding: 22px 5px;
+  position: relative;
+  width: 140px;
+}
+.overview div .text .wa .line1 {
+  position: absolute;
+  height: 4px;
+  background-color: #FFF;
+  width: 0;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.overview div .text .wa .line2 {
+  position: absolute;
+  height: 0;
+  background-color: #FFF;
+  width: 4px;
+  top: 0;
+  right: 0;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.overview div .text .wa .line3 {
+  position: absolute;
+  height: 4px;
+  background-color: #fff;
+  width: 0;
+  bottom: 0;
+  right: 0;
+  transition: 0.5s;
+  transition-delay: 1s;
+}
+.overview div .text .wa .line4 {
+  position: absolute;
+  height: 0;
+  background-color: #fff;
+  width: 4px;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+  transition-delay: 1.5s;
+}
+.map {
+  clear: both;
+  height: 900px;
+  background: #1d2227 url('http://www.tkgroup.co.kr/kor/_Img/Main/global-bg.jpg') repeat-x;
+  position: relative;
+}
+.map h3 {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-size: 42px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1;
+  padding-top: 100px;
+}
+.map div {
+  width: 1332px;
+  height: 574px;
+  position: absolute;
+  top: 236px;
+  left: 50%;
+  margin-left: -666px;
+}
+.map div img {
+  vertical-align: middle;
+}
+.map div p {
+  font-family: 'Calibri';
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  line-height: 140%;
+}
+.map div p strong {
+  font-weight: 300;
+  font-size: 17px;
+  display: block;
+}
+.map {
+  opacity: 1;
+}
+.map .global01 {
+  opacity: 1;
+}
+.map .global02 {
+  transition-delay: 0.3s;
+}
+.map .global02 .txt {
+  left: 676px;
+  top: 196px;
+}
+.map .global02 .txt strong {
+  font-weight: 300;
+  font-size: 17px;
+  display: block;
+}
+.map .global02 .line1 {
+  width: 1px;
+  height: 27px;
+  left: 613px;
+  top: 190px;
+  position: absolute;
+  background-color: #fff;
+}
+.map .global02 .line2 {
+  width: 50px;
+  height: 1px;
+  left: 614px;
+  top: 216px;
+  position: absolute;
+  background-color: #fff;
+}
+.global03 {
+  transition-delay: 0.5s;
+}
+.global03 .txt {
+  left: 1050px;
+  top: 235px;
+  color: #ec7a00;
+}
+.global03 .txt strong {
+  font-weight: 300;
+  font-size: 17px;
+  display: block;
+}
+.global03 .line01 {
+  width: 1px;
+  height: 97px;
+  position: absolute;
+  left: 871px;
+  top: 160px;
+  background-color: #ec7a00;
+}
+.global03 .line02 {
+  width: 166px;
+  height: 1px;
+  position: absolute;
+  left: 872px;
+  top: 256px;
+  background-color: #ec7a00;
+}
+.global04 {
+  transition-delay: 0.8s;
+}
+.global04 .txt {
+  left: 408px;
+  top: 116px;
+  color: #fff;
+}
+.global04 .line01 {
+  width: 1px;
+  height: 36px;
+  position: absolute;
+  left: 518px;
+  top: 138px;
+  background-color: #fff;
+}
+.global04 .line02 {
+  width: 60px;
+  height: 1px;
+  position: absolute;
+  left: 519px;
+  top: 173px;
+  background-color: #fff;
+}
+.global05 {
+  transition-delay: 1s;
+}
+.global05 .txt {
+  left: 676px;
+  top: 270px;
+  color: #fff;
+}
+.global05 .line01 {
+  width: 98px;
+  height: 1px;
+  position: absolute;
+  left: 567px;
+  top: 283px;
+  background-color: #fff;
+}
+.global05 .line02 {
+  width: 1px;
+  height: 22px;
+  position: absolute;
+  left: 647px;
+  top: 284px;
+  background-color: #fff;
+}
+.global05 .line03 {
+  width: 17px;
+  height: 1px;
+  position: absolute;
+  left: 648px;
+  top: 305px;
+  background-color: #fff;
+}
+.global06 {
+  transition-delay: 1.2s;
+}
+.global06 .txt {
+  left: 372px;
+  top: 389px;
+}
+.global06 .line01 {
+  width: 47px;
+  height: 1px;
+  position: absolute;
+  left: 516px;
+  top: 400px;
+  background-color: #fff;
+}
+.global06 .line02 {
+  width: 1px;
+  height: 37px;
+  position: absolute;
+  left: 563px;
+  top: 364px;
+  background-color: #fff;
+}
+.social {
+  width: 100%;
+  overflow: hidden;
+}
+.social h3 {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: -9999em;
+  left: -9999em;
+  display: block;
+  text-indent: -9999em;
+  font-size: 0px;
+  line-height: 0;
+}
+.social ul {
+  width: 100%;
+}
+.social ul li {
+  float: left;
+  width: 50%;
+  position: relative;
+}
+.social ul li a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.social ul li a:after {
+  background: rgba(0, 131, 132, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: block;
+  content: "";
+  opacity: 0;
+}
+.social ul li a:hover:after {
+  opacity: 1;
+}
+.social ul li a:hover img {
+  transform: scale(1.1, 1.1);
+  transition: all 0.4s ease-out;
+}
+.social ul li a:hover .btxt:after {
+  width: 0;
+}
+.social ul li a .img img {
+  width: 100%;
+  transition: 1s;
+}
+.social ul li a .btxt {
+  position: absolute;
+  z-index: 7;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  height: 22px;
+  top: 50%;
+  margin-top: -11px;
+  left: 50%;
+  width: 440px;
+  margin-left: -220px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  transition: all 0.4s ease-out;
+}
+.social ul li a .btxt:after {
+  width: 20px;
+  height: 3px;
+  background: #fff;
+  left: 50%;
+  display: block;
+  content: "";
+  text-align: center;
+  margin: -50px auto;
+  transform-origin: center;
+  transition: 1s;
+}
+.social ul li a .stxt {
+  position: absolute;
+  z-index: 7;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  height: 20px;
+  top: 60%;
+  margin-top: -11px;
+  left: 50%;
+  width: 440px;
+  margin-left: -220px;
+  font-weight: 300;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+.add {
+  position: relative;
+  height: auto;
+  display: block;
+}
+.add .bg img {
+  width: 100%;
+}
+.add .div-ov {
+  position: absolute;
+  width: 1400px;
+  top: 0;
+  left: 50%;
+  margin-left: -700px;
+  z-index: 6;
+}
+.add .div-ov .img {
+  position: absolute;
+  top: 99px;
+  right: -20px;
+  height: auto;
+  transition: all 0.4s ease-out;
+}
+.add .div-ov .img img {
+  border: 0px;
+  vertical-align: middle;
+}
+.add .div-ov .txt {
+  display: none;
+  position: absolute;
+  top: 99px;
+  right: 0;
+  line-height: 60px;
+  height: auto;
+  color: #000;
+  text-align: right;
+  font-weight: 600;
+  font-size: 55px;
+  font-style: oblique;
+  text-transform: uppercase;
+}
+.footer {
+  letter-spacing: 0.05em;
+}
+.footer #footerWrap {
+  display: block;
+  background: #080808;
+  color: #fff;
+  z-index: 9999;
+}
+.footer #footerWrap .footertop {
+  text-align: center;
+  margin: 0 auto;
+  height: 70px;
+  padding: 0 300px;
+  background: #191919;
+}
+.footer #footerWrap .footertop ul {
+  line-height: 1.25em;
+  height: 100%;
+}
+.footer #footerWrap .footertop ul li {
+  float: left;
+  width: 50%;
+  text-align: center;
+  height: 100%;
+  display: block;
+  font-size: 15px;
+}
+.footer #footerWrap .footertop ul li a {
+  line-height: 1.25em;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  line-height: 70px;
+}
+.footer #footerWrap .footertop ul li a span {
+  position: relative;
+  display: inline-block;
+  padding-left: 40px;
+  font-family: 'Malgun Gothic';
+  padding-right: 20px;
+  word-break: keep-all;
+  background: url('http://www.tkgroup.co.kr/_Template/Footer/tkgroup-kr/_Img/ftoplink_arr.png') no-repeat right center;
+  color: #e8e8e8;
+}
+.footer #footerWrap .footertop ul li a:before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: url('http://www.tkgroup.co.kr/_Template/Footer/tkgroup-kr/_Img/ftoplink_ico02.png') no-repeat 0 center;
+  vertical-align: middle;
+}
+.footer #footerWrap .footertop ul li:first-child a:before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: url('http://www.tkgroup.co.kr/_Template/Footer/tkgroup-kr/_Img/ftoplink_ico01.png') no-repeat 0 center;
+  vertical-align: middle;
+}
+.footer #footerWrap .divCon {
+  margin: 0 auto 0 auto;
+  padding: 84px 0;
+  text-align: center;
+  font-size: 15px;
+  max-width: 1200px;
+}
+.footer #footerWrap .divCon .fcopyright .flogo {
+  margin-bottom: 30px;
+}
+.footer #footerWrap .divCon .fcopyright .flogo img {
+  vertical-align: middle;
+}
+.footer #footerWrap .divCon .fcopyright .finfo {
+  color: #b5b5b5;
+  line-height: 120%;
+}
+.footer #footerWrap .divCon .fcopyright .finfo span span {
+  margin-left: 1em;
+}
+.footer #footerWrap .divCon .fcopyright .fcopyright {
+  margin-top: 5px;
+  color: #535353;
+  line-height: 120%;
+}
+.footer #footerWrap .topBtn {
+  position: fixed;
+  right: 0px;
+  bottom: 355px;
+  width: 60px;
+  display: block;
+  height: 60px;
+  text-align: center;
+  background: #080808;
+}
+.footer #footerWrap .topBtn:hover {
+  background: #059e9f;
+}
+.footer #footerWrap .topBtn span {
+  display: block;
+  padding-top: 30px;
+  background: url('http://www.tkgroup.co.kr/kor/_Img/Layout/top-btn.png') no-repeat center 20px;
+  text-transform: uppercase;
+  font-family: 'Malgun Gothic';
+  font-size: 12px;
+  color: #fcfcfc;
+}
+@media screen and (max-width: 1000px) {
+  html {
+    overflow-x: hidden;
+  }
+  header {
+    position: static;
+  }
+  header > div {
+    overflow: visible;
+  }
+  header .gnb .menu {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    width: 223px;
+    background-color: #FFF;
+  }
+  header .gnb .menu > ul > li {
+    background-color: #FFF;
+    text-align: left;
+  }
+  header .gnb .menu > ul > li > a {
+    color: #000;
+    line-height: 68px;
+  }
+  header .gnb .menu > ul > li div {
+    padding: 0;
+  }
+  header .gnb .menu > ul > li:hover div {
+    display: block;
+  }
+  header .gnb .menu > ul > li li {
+    background-color: #eee;
+    border-top: 1px #ccc solid;
+  }
+}
+@media screen and (max-width: 800px) {
+  .intro {
+    height: 500px;
+  }
+  .intro .titler img {
+    margin-top: 70px;
+  }
+}
+.sub01_container {
+  padding-top: 79px;
+  position: relative;
+}
+.sub01_container::after {
+  background: url('http://www.tkgroup.co.kr/kor/_Img/Content/vision-bg.jpg') no-repeat center top;
+  width: 100%;
+  display: block;
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left: -1000px;
+  z-index: -2;
+  top: 533px;
+}
+.ispage {
+  width: 100%;
+  min-width: 320px;
+}
+.ispage h1 {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  top: -9999em;
+  left: -9999em;
+  display: block;
+  text-indent: -9999em;
+  font-size: 0px;
+  line-height: 0;
+}
+.ispage .ispageimg {
+  width: 100%;
+  height: 450px;
+}
+.ispage .ispageimg img {
+  width: 100%;
+  height: 450px;
+}
+.ispage .isNavi {
+  height: 55px;
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  top: 474px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border-top: 1px #b8aa9e solid;
+}
+.ispage .isNavi ul {
+  position: relative;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.ispage .isNavi ul li {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 55px;
+}
+.ispage .isNavi ul li a {
+  display: block;
+  padding: 0 45px;
+  color: #ffffff;
+}
+.ispage .isNavi ul li a:hover {
+  background-color: rgba(5, 158, 159, 0.7);
+}
+.contTop {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.contTop .cont-tit {
+  line-height: 1.2em;
+  padding: 72px 0;
+  text-align: center;
+  position: relative;
+}
+.contTop .cont-tit h2 {
+  display: block;
+  font-size: 36px;
+  font-weight: 400;
+  font-family: "Malgun Gothic";
+  text-transform: uppercase;
+  line-height: 1.2em;
+  color: #111;
+  letter-spacing: -0.03em;
+}
+.contTop .cont-tit .prev {
+  left: 0;
+  background: url('http://www.tkgroup.co.kr/kor/_Img/Layout/cont-prev.png') no-repeat;
+  position: absolute;
+  top: 50%;
+  width: 62px;
+  height: 62px;
+  margin-top: -31px;
+}
+.contTop .cont-tit .next {
+  right: 0;
+  background: url('http://www.tkgroup.co.kr/kor/_Img/Layout/cont-next.png') no-repeat;
+  position: absolute;
+  top: 50%;
+  width: 62px;
+  height: 62px;
+  margin-top: -31px;
+}
+.visionWrap {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+.visionWrap .visionTop {
+  position: relative;
+  min-height: 420px;
+  margin-bottom: 105px;
+  margin: 0 auto;
+  padding-bottom: 105px;
+  text-align: center;
+}
+.visionWrap .visionTop::after {
+  background: url('http://www.tkgroup.co.kr/kor/_Img/Content/vision-top.jpg') no-repeat center top;
+  height: 100%;
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.visionWrap .visionTop .stxt {
+  max-width: 1200px;
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 130px 0 30px 0;
+  display: inline-block;
+}
+.visionWrap .visionTop .ctxt {
+  line-height: 120%;
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+.visionWrap .visionTop .ctxt .break {
+  display: block;
+}
+.visionWrap .vision-mit {
+  position: relative;
+  text-align: center;
+  color: #333;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  padding-bottom: 50px;
+  margin-bottom: 75px;
+}
+.visionWrap .vision-mit::after {
+  content: "";
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  bottom: 0;
+  background: #333;
+  display: block;
+}
+.visionWrap .vision-mit .tit {
+  font-size: 25px;
+  font-weight: normal;
+  opacity: 1;
+  padding-top: 0px;
+}
+.visionWrap .vision-mit .tit .btxt {
+  display: block;
+  font-weight: bold;
+  font-size: 34px;
+  margin-top: 20px;
+}
+.visionflow {
+  margin: 0 auto;
+  text-align: center;
+  width: 1200px;
+  height: 1290px;
+}
+.visionflow .flow-sec {
+  position: relative;
+  margin-bottom: 90px;
+}
+.visionflow .flow-sec .ctit {
+  position: absolute;
+  left: 50px;
+  top: 80px;
+  width: 123px;
+  height: 48px;
+  padding: 22px 0 0 45px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background: url('http://www.tkgroup.co.kr/kor/_Img/Content/vision_bul.png') no-repeat 0 0;
+}
+.visionflow .flow-sec .zoom-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+.visionflow .flow-sec .zoom-img img {
+  border: 0px;
+  vertical-align: middle;
+}
+.visionflow .flow-sec .zoom-img .view {
+  display: none;
+  color: #555;
+  text-decoration: none;
+}
+.visionflow .last {
+  position: relative;
+  width: 100%;
+  height: 190px;
+}
+.visionflow .last .blind {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: -9999em;
+  left: -9999em;
+  display: block;
+  text-indent: -9999em;
+  font-size: 0px;
+  line-height: 0;
+}
+.visionflow .last::after {
+  background: url('http://www.tkgroup.co.kr/kor/_Img/Content/vision_03.png') no-repeat center top;
+  width: 1200px;
+  height: 100%;
+  display: block;
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left: -600px;
+  z-index: -1;
+  top: 0;
+}
+.sub02container {
+  width: 100%;
+  padding-top: 80px;
+}
+.portfolio {
+  position: relative;
+  width: 100%;
+  height: 850px;
+  background: #262e35 url('http://www.tkgroup.co.kr/kor/_Img/Content/portfolio_fbg.gif') repeat 0 0;
+}
+.portfolio .portfolioWrap {
+  background: url('http://www.tkgroup.co.kr/kor/_Img/Content/portfolio_bg.png') no-repeat center 0;
+  height: 850px;
+}
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.slide li {
+  margin-right: 0px;
+  display: inline-block;
+}
+.slide li a {
+  position: relative;
+  width: 9px;
+  height: 9px;
+  top: 700px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #555;
+  display: block;
+}
+.slide li div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.slide li div cite {
+  color: #fff;
+  font-size: 52px;
+  font-weight: bold;
+  top: 140px;
+  line-height: 1;
+  display: block;
+  position: relative;
+}
+.slide li div span {
+  display: none;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  top: 170px;
+  line-height: 1;
+  display: block;
+}
+.slide li div img {
+  position: relative;
+  top: 100px;
+}
+.slide li.on > div {
+  display: block;
+}
+.slide li.on a {
+  background-color: #fff;
+}
+.slide .btngroup {
+  z-index: 5000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.slide .btngroup button {
+  cursor: pointer;
+}
+.slide .btngroup .next {
+  right: 0;
+  background: url('http://www.tkgroup.co.kr/kor/_Img/Content/portfolio_next.png') no-repeat 10px center;
+  position: absolute;
+  top: 0;
+  width: 90px;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  text-indent: -9999px;
+  transition: all 0.1s ease-out;
+}
+.slide .btngroup .prev {
+  left: 0;
+  background: url('http://www.tkgroup.co.kr/kor/_Img/Content/portfolio_prev.png') no-repeat 40px center;
+  position: absolute;
+  top: 0;
+  width: 90px;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  text-indent: -9999px;
+  transition: all 0.1s ease-out;
+}

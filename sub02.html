@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>태광실업</title>
+  <link rel="stylesheet" href="animate.css" type="text/css" />
+  <link rel="stylesheet" href="font/flaticon.css" type="text/css" />
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="wow.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    $(function(){
+        var ww=$('.slide').width();
+        var idx = Math.floor(Math.random()*$('.slide li').length);
+        $('.slide li').eq(idx).find('div').css('display','block');
+
+        var speed = 2000;
+        var call = function(){
+            $('.next').click();
+        }
+
+        // var tt = setInterval(call, speed)
+        //
+        // $('.slide').mouseenter(function(){
+        //     clearInterval(tt)
+        // }).mouseleave(function(){
+        //     tt=setInterval(call, speed)
+        // })
+
+
+        $('.next').click(function(){ //다음버튼 클릭하면 실행해
+            $('.slide li').removeClass('on') //슬라이드 클레스 안에 li
+            .eq(idx) //idx 번째
+            .find('div') //자식요소인 div 찾기
+            .animate({ //애니메이션 실행
+                left: -ww //왼쪽으로 ww만큼 이동
+            })
+            .parent() //그의 부모의
+            .next() //다음 녀석의
+            .addClass('on')
+            .find('div') //자식중 div 찾아
+            .css({
+                'display':'block', //눈에 보이게 하고
+                'left': ww //우측에 배치
+            })
+            .animate({ //움직여
+                'left':0 //눈에보이는 곳으로
+            })
+
+            idx++ //그리고 다음놈 준비해
+
+            if(idx == $('.slide li').length){ //마지막이 되면
+                console.log('dd');
+                idx = 0;
+                $('.slide li')
+                .eq(idx).addClass('on')
+                .find('div')
+                .css({
+                    'left': ww
+                })
+                .stop()
+                .animate({
+                    "left":'0'
+                })
+            }
+        })
+
+        $('.prev').click(function(){
+            $('.slide li').eq(idx).removeClass('on').find('div')
+            .animate({
+               'left' : ww
+           }).parent().prev().addClass('on').find('div')
+           .css({
+               'display':'block',
+               'left':-ww
+            }).animate({
+             'left' : 0
+            })
+
+            idx--
+
+            if(idx < 0){
+                idx = $('.slide li').length -1;
+                $('.slide li').eq(idx).addClass('on').find('div').css({
+                    'left':-ww,
+                    'display':'block'
+                }).stop().animate({
+                    "left":'0'
+                })
+            }
+        })
+        $('.slide li a').click(function(){
+
+            idx = $(this).parent().index(); //클릭한 엘리먼트의 위치번호를 뽑아 idx 변수에 대입해주세요
+            hisnum = $('.slide li.on').index(); //li에 on class 의 위치를 번호로 찾아 hisnum 변수에 대입해주세요.
+            if(idx > hisnum){
+                $('.slide li').eq(hisnum).removeClass('on').find('div').animate({
+                    'left':-ww
+                }) //hinum에 해당하는 엘리먼트의 자식요소div가 0지점에서 -500지점으로 에니메이션 이동해주세요
+                $('.slide li').eq(idx).addClass('on').find('div').css({
+                    'left':500,
+                    'display':'block'
+                }).animate({
+                    'left':0
+                }) //idx에 해당하는 엘리먼트의 div left:500지점에서 0 지점으로 에니메이션 이동해주세요
+                   //idx에 해당하는 엘리먼트에는 li를 on class를 추가하며 idx가 아닌 다른 형제자매 요소는 on class를 제거해 주세요.
+            }
+            else if (idx < hisnum) {
+                $('.slide li').eq(hisnum).removeClass('on').find('div').animate({
+                    'left':ww
+                })
+                $('.slide li').eq(idx).addClass('on').find('div').css({
+                    'left':-0,
+                    'display':'block'
+                }).animate({
+                    'left':0
+                })
+            }
+
+            return false;//a 의 기능을 막아주세요
+        })
+    })
+
+    </script>
+</head>
+<body>
+
+  <header>
+    <div>
+      <div class="gnb">
+        <div class="logo">
+          <a href="#"><img src="http://www.tkgroup.co.kr/kor/_Img/logo.png" alt="태광실업 로고"></a>
+        </div>
+        <div class="site-option">
+          <a href="#" class="home">home</a>
+          <a href="#" class="lang-en">ENG</a>
+          <a href="#" class="sitemap">
+            <span></span>
+            <span class="centerLine"></span>
+            <span></span>
+          </a>
+        </div>
+        <div class="menu">
+
+          <ul>
+            <li><a href="#">company</a>
+              <div>
+                <ul>
+                  <li><a href="#">회사개요</a></li>
+                  <li><a href="#">CEO인사말</a></li>
+                  <li><a href="#">회사 연혁</a></li>
+                  <li><a href="#">관계사 안내</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">management innovation</a>
+              <div class="">
+                <ul>
+                  <li><a href="#">비전</a></li>
+                  <li><a href="#">TK WAY</a></li>
+                  <li><a href="#">LEAN</a></li>
+                  <li><a href="#">TPM</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">portfolio</a>
+              <div class="">
+                <ul>
+                  <li><a href="#">포트폴리오</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">sustainability management</a>
+              <div class="">
+                <ul>
+                  <li><a href="#">SM</a></li>
+                  <li><a href="#">지속가능 경영보고서</a></li>
+                  <li><a href="#">정산장학재단</a></li>
+                  <li><a href="#">장학생지원</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">recruit</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="sub02container">
+    <!--  sub  작업 -->
+
+    <div class="portfolio">
+      <div class="portfolioWrap">
+        <div class="slide">
+          <div class="btngroup">
+            <button class="next">text</button>
+            <button class="prev">text</button>
+          </div>
+          <ul>
+            <li class="on">
+
+                <a href="#"></a>
+                <div>
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Content/portfolio01.png" alt="" />
+                <cite>NIKE LUNAREPIC FK</cite>
+                <span>RUNNING</span>
+              </div>
+            </li>
+            <li>
+
+                <a href="#"></a>
+                <div>
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Content/portfolio02.png" alt="" />
+                <cite>NIKE LUNAREPIC LOW FK</cite>
+                <span>RUNNING</span>
+              </div>
+            </li>
+            <li>
+
+                <a href="#"></a>
+                <div>
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Content/portfolio03.png" alt="" />
+                <cite>RNIKE LUNARGLIDE 8</cite>
+                <span>RUNNINGK</span>
+              </div>
+            </li>
+            <li>
+
+                <a href="#"></a>
+                <div>
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Content/portfolio04.png" alt="" />
+                <cite>NIKE AIR MAX 2017</cite>
+                <span>RUNNING</span>
+              </div>
+            </li>
+            <li>
+
+                <a href="#"></a>
+                <div>
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Content/portfolio05.png" alt="" />
+                <cite>NIKE FREE RN FK</cite>
+                <span>RUNNING</span>
+              </div>
+            </li>
+            <li>
+
+                <a href="#"></a>
+                <div>
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Content/portfolio06.png" alt="" />
+                <cite>NIKE SHOX R4</cite>
+                <span>RUNNING</span>
+              </div>
+            </li>
+            <li>
+
+                <a href="#"></a>
+                <div>
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Content/portfolio07.png" alt="" />
+                <cite>NIKE AIR MAX 90</cite>
+                <span>NSW</span>
+              </div>
+            </li>
+            <li>
+
+                <a href="#"></a>
+                <div>
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Content/portfolio08.png" alt="" />
+                <cite>NIKE AIR PRESTO</cite>
+                <span>NSW</span>
+              </div>
+            </li>
+            <li>
+
+                <a href="#"></a>
+                <div>
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Content/portfolio09.png" alt="" />
+                <cite>NIKE FREE TR FK</cite>
+                <span>TRAINING</span>
+              </div>
+            </li>
+            <li>
+
+                <a href="#"></a>
+                <div>
+                <img src="http://www.tkgroup.co.kr/kor/_Img/Content/portfolio10.png" alt="" />
+                <cite>AIR JORDAN TRAINER 1 LOW</cite>
+                <span>JORDAN</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="footer">
+      <div id="footerWrap">
+          <div class="footertop">
+              <ul>
+                  <li>
+                      <a href="#">
+                          <span>
+                              개인정보처리방침
+                          </span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          <span>
+                              지속가능보고서 다운로드
+                          </span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          <div class="divCon">
+              <div class="fcopyright">
+                  <p class="flogo">
+                      <img src="http://www.tkgroup.co.kr/kor/_Img/f-logo.png" alt="">
+                  </p>
+                  <div class="finfo">
+                      <span class="name">태광실업(주)</span>
+                      <span class="paddr">경상남도 김해시 김해대로 2635번길 26(안동)</span>
+                      <span class="pter-wrap">
+                          <span class="ptel">TEL : 055-333-7151</span>
+                      </span>
+                      <span class="pter-wrap">
+                          <span class="ptel"> FAX : 055-336-4917</span>
+                      </span>
+                  </div>
+                  <div class="fcopyright">
+                      Copyright (C) 2016 Taekwang. co., ltd All rights reserved.
+                  </div>
+              </div>
+          </div>
+          <a href="#top" class="topBtn">
+              <span>TOP</span>
+          </a>
+      </div>
+  </div>
+
+
+</body>
+</html>
+<!--  -->
